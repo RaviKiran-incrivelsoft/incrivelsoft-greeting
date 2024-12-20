@@ -7,19 +7,19 @@ const CampaignDashboard = () => {
 	const campaigns = [
 		{
 			id: 1,
-			media: "campaign_video_1.mp4",
+			media: "./sample.mp4",
 			status: "Pending",
 			createdAt: "2024-12-01",
 		},
 		{
 			id: 2,
-			media: "campaign_video_2.mp4",
+			media: "./sample.mp4",
 			status: "Pending",
 			createdAt: "2024-12-05",
 		},
 		{
 			id: 3,
-			media: "campaign_video_3.mp4",
+			media: "./sample.mp4",
 			status: "Pending",
 			createdAt: "2024-12-10",
 		},
