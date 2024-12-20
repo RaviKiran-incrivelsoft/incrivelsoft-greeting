@@ -24,13 +24,13 @@ const Navbar = () => {
 						Home
 					</a>
 					<a
-						href="/"
+						href="/service"
 						className="text-gray-600 hover:text-gray-800 hover:underline hover:underline-offset-8"
 					>
 						Services
 					</a>
 					<a
-						href="/"
+						href="/contact"
 						className="text-gray-600 hover:text-gray-800 hover:underline hover:underline-offset-8"
 					>
 						Contact
