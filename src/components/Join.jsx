@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
+import RegisterPopup from './RegisterPopup';
+import LoginModal from './LoginModal';
 
 // Define the carousel component
 const Join = () => {
+	const [showRegisterPopup, setShowRegisterPopup] = useState(false);
+	const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+	const toggleLoginModal = () => {
+		setIsLoginModalOpen(!isLoginModalOpen);
+	};
+
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -22,11 +31,13 @@ const Join = () => {
 				<p className="text-lg mb-6">
 					Be a part of our spiritual family and let us celebrate your special moments together. Sign up today!
 				</p>
-				<button className="bg-black text-white border-2 border-white py-2 px-6 rounded-lg hover:bg-white hover:text-black hover:border-black">
+				<button onClick={() => setShowRegisterPopup(true)} className="bg-black text-white border-2 border-white py-2 px-6 rounded-lg hover:bg-white hover:text-black hover:border-black">
 					Register
 				</button>
-
 			</div>
+
+			{showRegisterPopup && !isLoginModalOpen && <RegisterPopup openLoginModal={toggleLoginModal} closeRegModal={()=> setShowRegisterPopup(false)} />}
+			{isLoginModalOpen && <LoginModal isOpen={isLoginModalOpen} toggleModal={toggleLoginModal} />}
 
 			{/* Right carousel */}
 			<div className="w-1/3 ml-10">

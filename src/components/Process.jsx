@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Process = () => {
+	const navigate = useNavigate();
 	return (
 		<section className="px-32 py-20 bg-gray-100 flex justify-between items-center">
 			{/* Left side image */}
@@ -19,7 +21,7 @@ const Process = () => {
 					Sign Up With Us, And On Your Birthday, You'll Receive A Personalized Message Filled With
 					Blessings From The Temple.
 				</p>
-				<button className="bg-black text-white border-2 border-white py-3 px-6 rounded-lg hover:bg-white hover:text-black hover:border-black">
+				<button onClick={()=> navigate('/campaign')} className="bg-black text-white border-2 border-white py-3 px-6 rounded-lg hover:bg-white hover:text-black hover:border-black">
 					Discover More
 				</button>
 			</div>
